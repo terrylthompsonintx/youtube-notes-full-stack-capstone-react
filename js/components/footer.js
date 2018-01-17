@@ -15,17 +15,17 @@ export default function Footer (props) {
         <footer className='col-12' id='contact'>
         <h2>Contact </h2>
 
-        <p>&copy;Terry Thompson</p>
+        <p>&copy;2018 Terry Thompson</p>
         <ul>
 
         <li>
-        <a href="https://github.com/terrylthompsonintx"><img src="assets/images/mark-github.png" alt="Git Hub Logo"></a>
+        <a href="https://github.com/terrylthompsonintx"><img src="assets/images/mark-github.png" alt="Git Hub Logo" /></a>
         </li>
         <li>
-        <a href='mailto:TerryLThompsonintx@gmail.com'><img src="assets/images/email.png" alt="Email Logo"></a>
+        <a href='mailto:TerryLThompsonintx@gmail.com'><img src="assets/images/email.png" alt="Email Logo" /></a>
         </li>
         <li>
-        <a href='https://www.linkedin.com/in/terrylthompson/'><img src="assets/images/th.jpg" alt="linked in  Logo"></a>
+        <a href='https://www.linkedin.com/in/terrylthompson/'><img src="assets/images/th.jpg" alt="linked in  Logo" /></a>
         </li>
         </ul>
 

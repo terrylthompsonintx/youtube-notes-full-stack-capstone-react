@@ -11,7 +11,7 @@ configure({ adapter: new Adapter() });
 
 export default function Header(props) {
     return (
-        <header class='col-12'>
+        <header className='col-12'>
         <button id='homeButton'><img src="assets/images/youtube-logo-transparent.png" alt="Image of YouTube Notes Logo" /></button>
 
         <div className='messageBox'><span>Loading....</span></div>

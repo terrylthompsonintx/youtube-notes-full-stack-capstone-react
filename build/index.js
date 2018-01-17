@@ -60,6 +60,10 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
+	var _footer = __webpack_require__(547);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -68,6 +72,9 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	                        return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
 	});
 
 /***/ }),
@@ -20661,7 +20668,7 @@
 	function Header(props) {
 	    return _react2.default.createElement(
 	        'header',
-	        { 'class': 'col-12' },
+	        { className: 'col-12' },
 	        _react2.default.createElement(
 	            'button',
 	            { id: 'homeButton' },
@@ -52794,7 +52801,7 @@
 /* 460 */
 /***/ (function(module, exports) {
 
-	module.exports = {"_from":"cheerio@^1.0.0-rc.2","_id":"cheerio@1.0.0-rc.2","_inBundle":false,"_integrity":"sha1-S59TqBsn5NXawxwP/Qz6A8xoMNs=","_location":"/cheerio","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"cheerio@^1.0.0-rc.2","name":"cheerio","escapedName":"cheerio","rawSpec":"^1.0.0-rc.2","saveSpec":null,"fetchSpec":"^1.0.0-rc.2"},"_requiredBy":["/","/enzyme"],"_resolved":"https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.2.tgz","_shasum":"4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db","_spec":"cheerio@^1.0.0-rc.2","_where":"C:\\Users\\terry\\Desktop\\thinkful\\projects\\youtube-notes-full-stack-capstone-react","author":{"name":"Matt Mueller","email":"mattmuelle@gmail.com","url":"mat.io"},"bugs":{"url":"https://github.com/cheeriojs/cheerio/issues"},"bundleDependencies":false,"dependencies":{"css-select":"~1.2.0","dom-serializer":"~0.1.0","entities":"~1.1.1","htmlparser2":"^3.9.1","lodash":"^4.15.0","parse5":"^3.0.1"},"deprecated":false,"description":"Tiny, fast, and elegant implementation of core jQuery designed specifically for the server","devDependencies":{"benchmark":"^2.1.0","coveralls":"^2.11.9","expect.js":"~0.3.1","istanbul":"^0.4.3","jquery":"^3.0.0","jsdom":"^9.2.1","jshint":"^2.9.2","mocha":"^3.1.2","xyz":"~1.1.0"},"engines":{"node":">= 0.6"},"files":["index.js","lib"],"homepage":"https://github.com/cheeriojs/cheerio#readme","keywords":["htmlparser","jquery","selector","scraper","parser","html"],"license":"MIT","main":"./index.js","name":"cheerio","repository":{"type":"git","url":"git://github.com/cheeriojs/cheerio.git"},"scripts":{"test":"make test"},"version":"1.0.0-rc.2"}
+	module.exports = {"_from":"cheerio@^1.0.0-rc.2","_id":"cheerio@1.0.0-rc.2","_inBundle":false,"_integrity":"sha1-S59TqBsn5NXawxwP/Qz6A8xoMNs=","_location":"/cheerio","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"cheerio@^1.0.0-rc.2","name":"cheerio","escapedName":"cheerio","rawSpec":"^1.0.0-rc.2","saveSpec":null,"fetchSpec":"^1.0.0-rc.2"},"_requiredBy":["/","/enzyme"],"_resolved":"https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.2.tgz","_shasum":"4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db","_spec":"cheerio@^1.0.0-rc.2","_where":"C:\\Users\\terry\\Desktop\\Thinkful\\projects\\youtube-notes-full-stack-capstone-react","author":{"name":"Matt Mueller","email":"mattmuelle@gmail.com","url":"mat.io"},"bugs":{"url":"https://github.com/cheeriojs/cheerio/issues"},"bundleDependencies":false,"dependencies":{"css-select":"~1.2.0","dom-serializer":"~0.1.0","entities":"~1.1.1","htmlparser2":"^3.9.1","lodash":"^4.15.0","parse5":"^3.0.1"},"deprecated":false,"description":"Tiny, fast, and elegant implementation of core jQuery designed specifically for the server","devDependencies":{"benchmark":"^2.1.0","coveralls":"^2.11.9","expect.js":"~0.3.1","istanbul":"^0.4.3","jquery":"^3.0.0","jsdom":"^9.2.1","jshint":"^2.9.2","mocha":"^3.1.2","xyz":"~1.1.0"},"engines":{"node":">= 0.6"},"files":["index.js","lib"],"homepage":"https://github.com/cheeriojs/cheerio#readme","keywords":["htmlparser","jquery","selector","scraper","parser","html"],"license":"MIT","main":"./index.js","name":"cheerio","repository":{"type":"git","url":"git://github.com/cheeriojs/cheerio.git"},"scripts":{"test":"make test"},"version":"1.0.0-rc.2"}
 
 /***/ }),
 /* 461 */
@@ -64921,6 +64928,87 @@
 	}
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	        value: true
+	});
+	exports.default = Footer;
+	
+	__webpack_require__(61);
+	
+	__webpack_require__(129);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(131);
+	
+	var _enzymeAdapterReact = __webpack_require__(528);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Footer(props) {
+	        return _react2.default.createElement(
+	                'footer',
+	                { className: 'col-12', id: 'contact' },
+	                _react2.default.createElement(
+	                        'h2',
+	                        null,
+	                        'Contact '
+	                ),
+	                _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        '\xA92018 Terry Thompson'
+	                ),
+	                _react2.default.createElement(
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                _react2.default.createElement(
+	                                        'a',
+	                                        { href: 'https://github.com/terrylthompsonintx' },
+	                                        _react2.default.createElement('img', { src: 'assets/images/mark-github.png', alt: 'Git Hub Logo' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                _react2.default.createElement(
+	                                        'a',
+	                                        { href: 'mailto:TerryLThompsonintx@gmail.com' },
+	                                        _react2.default.createElement('img', { src: 'assets/images/email.png', alt: 'Email Logo' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                _react2.default.createElement(
+	                                        'a',
+	                                        { href: 'https://www.linkedin.com/in/terrylthompson/' },
+	                                        _react2.default.createElement('img', { src: 'assets/images/th.jpg', alt: 'linked in  Logo' })
+	                                )
+	                        )
+	                )
+	        );
+	}
 
 /***/ })
 /******/ ]);
