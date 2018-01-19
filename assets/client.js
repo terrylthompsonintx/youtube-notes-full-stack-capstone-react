@@ -159,10 +159,10 @@ $(document).on('click','#new-project', function () {
     $('main').hide();
     $('.new-proj').show();
 });
-$(document).on('click','#old-project', function () {
-    $('main').hide();
-    $('.display-subject-page').show();
-});
+//$(document).on('click','#old-project', function () {
+//    $('main').hide();
+//    $('.display-subject-page').show();
+//});
 $(document).on('click','#homeButton', function () {
     $('main').hide();
     $('.home-page').show();
@@ -279,7 +279,7 @@ $(document).on('click', '#saveNotebutton', function (selectedVid, selectedTitle,
             console.log(errorThrown);
         });
 });
-$('#old-project').on('click', function () {
+$(document).on('click','#old-project', function () {
     oldProjget();
 })
 $(document).on('click', '.selectNoteButton', function (event, selectedTitle, selectedVid, selectedPic) {
