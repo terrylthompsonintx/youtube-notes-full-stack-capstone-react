@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-export default function Home-page(props) {
+export default function HomePage(props) {
 return (
     <main className='home-page'>
     <article className='col-12'>

@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-export default function Display-subject-page(props) {
+export default function DisplaySubjectPage(props) {
 return (
     <main className='display-subject-page'>
     <article id='subjectHead' className='col-12'>

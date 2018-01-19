@@ -26,7 +26,7 @@ function oldProjget() {
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/getyounote/',
+        url: 'https://youtube-notes-capstone.herokuapp.com/getyounote/',
         })
         .done(function (result) {
             previousNotesOut(result);
@@ -155,15 +155,15 @@ $(function () {
     $('.home-page').show();
     $('.messageBox').hide();
 });
-$('#new-project').on('click', function () {
+$(document).on('click','#new-project', function () {
     $('main').hide();
     $('.new-proj').show();
 });
-$('#old-project').on('click', function () {
+$(document).on('click','#old-project', function () {
     $('main').hide();
     $('.display-subject-page').show();
 });
-$('#homeButton').on('click', function () {
+$(document).on('click','#homeButton', function () {
     $('main').hide();
     $('.home-page').show();
 });
@@ -179,7 +179,7 @@ $(document).on('click', '#backButton2', function (event) {
     $('.display-subject-page').hide();
     $('.new-proj').show();
 });
-$('#searchButton').on('click', function () {
+$(document).on('click','#searchButton', function () {
 
     event.preventDefault();
 
@@ -190,7 +190,7 @@ $('#searchButton').on('click', function () {
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/getyoutubedata/' + searchString,
+        url: 'https://youtube-notes-capstone.herokuapp.com/getyoutubedata/' + searchString,
         })
         .done(function (result) {
             videoSearchOut(result);
@@ -211,7 +211,7 @@ $(document).on('click', '.deleteButton', function (event) {
             method: 'DELETE',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/deletenote/' + deleteId,
+        url: 'https://youtube-notes-capstone.herokuapp.com/deletenote/' + deleteId,
         })
         .done(function (result) {
 
@@ -266,7 +266,7 @@ $(document).on('click', '#saveNotebutton', function (selectedVid, selectedTitle,
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify(newNote),
-            url: '/younote/',
+        url: 'https://youtube-notes-capstone.herokuapp.com/younote/',
         })
         .done(function (result) {
             displayError('Saved');
@@ -291,7 +291,7 @@ $(document).on('click', '.selectNoteButton', function (event, selectedTitle, sel
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/getayounote/' + selectedVid,
+        url: 'https://youtube-notes-capstone.herokuapp.com/getayounote/' + selectedVid,
         })
         .done(function (result) {
             displayOldsubjectpage(result);
@@ -333,7 +333,7 @@ $(document).on('submit', '.editForm', function (event) {
             method: 'PUT',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/putyounote/',
+        url: 'https://youtube-notes-capstone.herokuapp.com/putyounote/',
             data: JSON.stringify(eNote)
         })
         .done(function (result) {

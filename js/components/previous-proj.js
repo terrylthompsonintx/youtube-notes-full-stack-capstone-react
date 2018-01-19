@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-export default function Header(props) {
+export default function PreviousProj(props) {
 return (
     <main className='previous-proj'>
     <div className='col-12' id='oldProjDisplay'>

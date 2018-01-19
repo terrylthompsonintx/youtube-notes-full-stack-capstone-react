@@ -64,6 +64,26 @@
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
+	var _displaySubjectPage = __webpack_require__(548);
+	
+	var _displaySubjectPage2 = _interopRequireDefault(_displaySubjectPage);
+	
+	var _homePage = __webpack_require__(549);
+	
+	var _homePage2 = _interopRequireDefault(_homePage);
+	
+	var _previousProj = __webpack_require__(550);
+	
+	var _previousProj2 = _interopRequireDefault(_previousProj);
+	
+	var _newProj = __webpack_require__(551);
+	
+	var _newProj2 = _interopRequireDefault(_newProj);
+	
+	var _oldProj = __webpack_require__(552);
+	
+	var _oldProj2 = _interopRequireDefault(_oldProj);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -75,6 +95,21 @@
 	});
 	document.addEventListener('DOMContentLoaded', function () {
 	                        return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_displaySubjectPage2.default, null), document.getElementById('reactDisplaysSubjectPage'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_homePage2.default, null), document.getElementById('reactHomePage'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_previousProj2.default, null), document.getElementById('reactPreviousProj'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_newProj2.default, null), document.getElementById('reactNewProj'));
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+	                        return _reactDom2.default.render(_react2.default.createElement(_oldProj2.default, null), document.getElementById('reactOldProj'));
 	});
 
 /***/ }),
@@ -65008,6 +65043,259 @@
 	                        )
 	                )
 	        );
+	}
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = DisplaySubjectPage;
+	
+	__webpack_require__(61);
+	
+	__webpack_require__(129);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(131);
+	
+	var _enzymeAdapterReact = __webpack_require__(528);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function DisplaySubjectPage(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'display-subject-page' },
+	        _react2.default.createElement('article', { id: 'subjectHead', className: 'col-12' }),
+	        _react2.default.createElement('article', { className: 'col-6', id: 'viewSearchReturn' }),
+	        _react2.default.createElement('article', { className: 'col-6', id: 'youNoteaArea' })
+	    );
+	}
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = HomePage;
+	
+	__webpack_require__(61);
+	
+	__webpack_require__(129);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(131);
+	
+	var _enzymeAdapterReact = __webpack_require__(528);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function HomePage(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'home-page' },
+	        _react2.default.createElement(
+	            'article',
+	            { className: 'col-12' },
+	            _react2.default.createElement(
+	                'h2',
+	                { id: 'info' },
+	                'This app allows you to search, view, and pause a YouTube Video while taking and saving notes.'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'col-6' },
+	            _react2.default.createElement(
+	                'button',
+	                { className: 'button ctabutton ', id: 'new-project' },
+	                _react2.default.createElement('i', { className: 'fa fa-plus', 'aria-hidden': 'true' }),
+	                ' New Project'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'col-6' },
+	            _react2.default.createElement(
+	                'button',
+	                { className: 'button ctabutton ', id: 'old-project' },
+	                _react2.default.createElement('i', { className: 'fa fa-file-video-o', 'aria-hidden': 'true' }),
+	                ' Old Projects'
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = PreviousProj;
+	
+	__webpack_require__(61);
+	
+	__webpack_require__(129);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(131);
+	
+	var _enzymeAdapterReact = __webpack_require__(528);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function PreviousProj(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'previous-proj' },
+	        _react2.default.createElement('div', { className: 'col-12', id: 'oldProjDisplay' })
+	    );
+	}
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = NewProj;
+	
+	__webpack_require__(61);
+	
+	__webpack_require__(129);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(131);
+	
+	var _enzymeAdapterReact = __webpack_require__(528);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function NewProj(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'new-proj' },
+	        _react2.default.createElement(
+	            'article',
+	            { className: 'col-12' },
+	            _react2.default.createElement(
+	                'h2',
+	                { id: 'instruction' },
+	                'Enter a subject for which to search:'
+	            ),
+	            _react2.default.createElement('input', { id: 'searchFor', type: 'text' }),
+	            _react2.default.createElement(
+	                'button',
+	                { type: 'button', id: 'searchButton', className: 'button ctabutton' },
+	                _react2.default.createElement('i', { className: 'fa fa-search', 'aria-hidden': 'true' }),
+	                ' Search'
+	            )
+	        ),
+	        _react2.default.createElement('article', { className: 'col-12', id: 'searchvidResult' })
+	    );
+	}
+
+/***/ }),
+/* 552 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = OldProj;
+	
+	__webpack_require__(61);
+	
+	__webpack_require__(129);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(131);
+	
+	var _enzymeAdapterReact = __webpack_require__(528);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function OldProj(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { className: 'old-proj' },
+	        _react2.default.createElement('article', { id: 'subjectHeadOld', className: 'col-12' }),
+	        _react2.default.createElement('article', { className: 'col-6', id: 'oldSearchReturn' }),
+	        _react2.default.createElement('article', { className: 'col-6', id: 'youoldNoteaArea' })
+	    );
 	}
 
 /***/ })

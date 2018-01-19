@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-export default function Old-proj(props) {
+export default function OldProj(props) {
 return (
     <main className='old-proj'>
     <article id='subjectHeadOld' className='col-12'>
