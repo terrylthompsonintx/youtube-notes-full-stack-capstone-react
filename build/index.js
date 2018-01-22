@@ -65087,6 +65087,7 @@
 	        _react2.default.createElement('article', { className: 'col-6', id: 'youNoteaArea' })
 	    );
 	}
+	// Display subject
 
 /***/ }),
 /* 549 */
