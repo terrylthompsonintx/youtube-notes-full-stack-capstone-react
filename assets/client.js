@@ -26,7 +26,7 @@ function oldProjget() {
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-        url: 'https://youtube-notes-capstone.herokuapp.com/getyounote/',
+            url: 'https://youtube-notes-capstone.herokuapp.com/getyounote/',
         })
         .done(function (result) {
             previousNotesOut(result);
@@ -109,7 +109,8 @@ function videoSearchOut(data) {
         buildTheHtmlOutput += "<p class='results'>" + videosArrayValue.snippet.title + '</p>'; //output vide title
         buildTheHtmlOutput += "<input type='hidden' class='picValue' value='" + videosArrayValue.snippet.thumbnails.high.url + "'>";
         buildTheHtmlOutput += "<input type='hidden' class='title' value='" + videosArrayValue.snippet.title + "'>";
-        buildTheHtmlOutput += "<input type='hidden' class='vidURL' value='https://www.youtube.com/embed/" + videosArrayValue.id.videoId + "'>"
+        buildTheHtmlOutput += "<input type='hidden' class='vidURL' value='https://www.youtube.com/embed/" + videosArrayValue.id.videoId + "'>";
+        buildTheHtmlOutput += "<input type='hidden' class='vidId' value='" + videosArrayValue.id.videoId + "'>";
         buildTheHtmlOutput += '<button class="button selectButton ctabutton" ><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Select</button>';
         buildTheHtmlOutput += "</form>";
         buildTheHtmlOutput += "</div>";
@@ -155,7 +156,7 @@ $(function () {
     $('.home-page').show();
     $('.messageBox').hide();
 });
-$(document).on('click','#new-project', function () {
+$(document).on('click', '#new-project', function () {
     $('main').hide();
     $('.new-proj').show();
 });
@@ -163,7 +164,7 @@ $(document).on('click','#new-project', function () {
 //    $('main').hide();
 //    $('.display-subject-page').show();
 //});
-$(document).on('click','#homeButton', function () {
+$(document).on('click', '#homeButton', function () {
     $('main').hide();
     $('.home-page').show();
 });
@@ -179,18 +180,19 @@ $(document).on('click', '#backButton2', function (event) {
     $('.display-subject-page').hide();
     $('.new-proj').show();
 });
-$(document).on('click','#searchButton', function () {
+$(document).on('click', '#searchButton', function () {
 
     event.preventDefault();
 
     let searchString = $('#searchFor').val();
     $('#searchFor').val('');
+    displayError('Searching Youtube');
     //console.log('eventhandler fired: ' + searchString)
     $.ajax({
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-        url: 'https://youtube-notes-capstone.herokuapp.com/getyoutubedata/' + searchString,
+            url: 'https://youtube-notes-capstone.herokuapp.com/getyoutubedata/' + searchString,
         })
         .done(function (result) {
             videoSearchOut(result);
@@ -211,7 +213,7 @@ $(document).on('click', '.deleteButton', function (event) {
             method: 'DELETE',
             dataType: 'json',
             contentType: 'application/json',
-        url: 'https://youtube-notes-capstone.herokuapp.com/deletenote/' + deleteId,
+            url: 'https://youtube-notes-capstone.herokuapp.com/deletenote/' + deleteId,
         })
         .done(function (result) {
 
@@ -235,11 +237,28 @@ $(document).on('click', '.selectButton', function (event, selectedTitle, selecte
     var selectedTitle = $(this).parent().find('.title').val();
     var selectedPic = $(this).parent().find('.picValue').val();
     //console.log(selectedPic);
-    displaysubjectpage(selectedVid, selectedTitle, selectedPic);
+    var selectedVidId = $(this).parent().find('.vidId').val();
     //console.log(selectedVid, selectedTitle);
 
 
+    console.log(selectedVidId);
+    $.ajax({
+            method: 'GET',
+            dataType: 'json',
+            contentType: 'application/json',
+            url: '/checkyounote/'
+            selectedVidId,
+        })
+        .done(function (result) {
+            console.log(result);
+            displayError('Project exists.  Go to old projects.');
 
+            //videoSearchOut(result);
+            //console.log(result);
+        })
+        .fail(function (jqXHR, error, errorThrown) {
+            displaysubjectpage(selectedVid, selectedTitle, selectedPic);
+        });
 });
 $(document).on('click', '#saveNotebutton', function (selectedVid, selectedTitle, d) {
     console.log('save fired');
@@ -266,7 +285,7 @@ $(document).on('click', '#saveNotebutton', function (selectedVid, selectedTitle,
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify(newNote),
-        url: 'https://youtube-notes-capstone.herokuapp.com/younote/',
+            url: 'https://youtube-notes-capstone.herokuapp.com/younote/',
         })
         .done(function (result) {
             displayError('Saved');
@@ -279,7 +298,7 @@ $(document).on('click', '#saveNotebutton', function (selectedVid, selectedTitle,
             console.log(errorThrown);
         });
 });
-$(document).on('click','#old-project', function () {
+$(document).on('click', '#old-project', function () {
     oldProjget();
 })
 $(document).on('click', '.selectNoteButton', function (event, selectedTitle, selectedVid, selectedPic) {
@@ -291,7 +310,7 @@ $(document).on('click', '.selectNoteButton', function (event, selectedTitle, sel
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-        url: 'https://youtube-notes-capstone.herokuapp.com/getayounote/' + selectedVid,
+            url: 'https://youtube-notes-capstone.herokuapp.com/getayounote/' + selectedVid,
         })
         .done(function (result) {
             displayOldsubjectpage(result);
@@ -333,7 +352,7 @@ $(document).on('submit', '.editForm', function (event) {
             method: 'PUT',
             dataType: 'json',
             contentType: 'application/json',
-        url: 'https://youtube-notes-capstone.herokuapp.com/putyounote/',
+            url: 'https://youtube-notes-capstone.herokuapp.com/putyounote/',
             data: JSON.stringify(eNote)
         })
         .done(function (result) {
