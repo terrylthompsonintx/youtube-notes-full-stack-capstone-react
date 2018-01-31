@@ -246,8 +246,7 @@ $(document).on('click', '.selectButton', function (event, selectedTitle, selecte
             method: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/checkyounote/'
-            selectedVidId,
+            url: '/checkyounote/' + selectedVidId,
         })
         .done(function (result) {
             console.log(result);
